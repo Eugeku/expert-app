@@ -1,5 +1,11 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-config-clean-order"],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-clean-order",
+    "stylelint-config-standard-scss",
+    "stylelint-config-recommended-scss"
+  ],
+  "plugins": ["stylelint-scss"],
   "rules": {
     "no-duplicate-selectors": true,
     "block-no-empty": true,
@@ -9,6 +15,8 @@
     "selector-pseudo-class-no-unknown": true,
     "selector-pseudo-element-colon-notation": "double",
     "no-descending-specificity": true,
-    "font-family-no-missing-generic-family-keyword": true
+    "font-family-no-missing-generic-family-keyword": true,
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true
   }
 }

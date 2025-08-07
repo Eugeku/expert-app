@@ -1,0 +1,17 @@
+@import 'normalize.css';
+
+* {
+  box-sizing: border-box;
+}
+
+$primary-color: #1c1c1c;
+$secondary-color: #fff;
+$third-color: #f00;
+$primary-font: 'Roboto', sans-serif;
+$secondary-font: 'Open Sans', sans-serif;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
