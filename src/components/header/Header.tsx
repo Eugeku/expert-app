@@ -9,7 +9,10 @@ const Header: FC = () => {
   return (
     <header className={styles.header}>
       {/* <Logo /> */}
-      <div>Header log</div>
+      <div>
+        Header log
+        <div className={styles.logo}>Logo</div>
+      </div>
 
       {/* Navigation */}
       <div>{t('welcome', { name: 'Yauhen' })}</div>
