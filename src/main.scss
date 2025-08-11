@@ -1,17 +1,37 @@
-@import 'normalize.css';
+@use 'reset-css' as *;
+
+:root {
+  --color-primary: #3a7bd5;
+  --color-secondary: #00d2ff;
+  --color-accent: #ff9f43;
+  --color-success: #28c76f;
+  --color-warning: #ffb400;
+  --color-error: #ea5455;
+  --color-info: #1e9ff2;
+  --color-bg: #f5f7fa;
+  --color-bg-alt: #fff;
+  --color-text: #2e2e2e;
+  --color-text-muted: #7b7b7b;
+  --color-border: #dfe6e9;
+  --color-shadow: rgb(0 0 0 / 8%);
+  --short-animation: 0.3s ease-in-out;
+  --long-animation: 0.5s ease-in-out;
+  --regular-text-size: 1rem;
+  --large-text-size: 1.5rem;
+  --h1-text-size: 2rem;
+  --h2-text-size: 1.5rem;
+  --h3-text-size: 1.25rem;
+  --h4-text-size: 1rem;
+  --h5-text-size: 0.875rem;
+  --h6-text-size: 0.75rem;
+}
 
 * {
+  scroll-behavior: smooth;
   box-sizing: border-box;
 }
 
-$primary-color: #1c1c1c;
-$secondary-color: #fff;
-$third-color: #f00;
-$primary-font: 'Roboto', sans-serif;
-$secondary-font: 'Open Sans', sans-serif;
-
-@mixin flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.root {
+  font-size: var(--regular-text-size);
+  background-color: var(--color-bg);
 }

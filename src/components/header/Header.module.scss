@@ -1,7 +1,13 @@
 .header {
-  color: aqua;
+  position: sticky;
+  top: 0;
 
-  .logo {
-    color: red;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: fit-content;
+
+  background-color: var(--color-bg);
 }

@@ -1,26 +1,19 @@
-import LanguageSwitcher from '@components/lang-switcher/lang-switcher';
+import HeaderLogo from '@components/header/header-logo/HeaderLogo';
+import Navigation from '@components/header/navigation/Navigation';
+// import LanguageSwitcher from '@components/lang-switcher/lang-switcher';
 import type { FC } from 'react';
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 import styles from './Header.module.scss';
 
 const Header: FC = () => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   return (
     <header className={styles.header}>
-      {/* <Logo /> */}
-      <div>
-        Header log
-        <div className={styles.logo}>Logo</div>
-      </div>
+      <HeaderLogo />
+      <Navigation />
 
-      {/* Navigation */}
-      <div>{t('welcome', { name: 'Yauhen' })}</div>
-
-      {/* <Navigation /> */}
-      <div>Navigation</div>
-
-      <LanguageSwitcher />
+      {/* <LanguageSwitcher /> */}
     </header>
   );
 };

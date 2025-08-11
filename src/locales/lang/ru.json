@@ -1,5 +1,13 @@
 {
-  "page_title": "Экспертная лаборатория",
+  "page_title": "Витебский технический центр",
+  "company_name": "ООО «Витебский технический центр»",
+
+  "naviagation_about": "О компании",
+  "naviagation_offers": "Услуги",
+  "naviagation_contacts": "Контакты",
+  "naviagation_info": "Полезная информация",
+  "naviagation_request": "Оставить заявку",
+
   "welcome": "Привет, {{name}}!",
   "logout": "Выйти"
 }

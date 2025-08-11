@@ -8,13 +8,12 @@ const App: FC = () => {
   useDocumentTitle('page_title');
 
   return (
-    <>
+    <div className="app-wrapper">
       <div className="app">
         <Header />
-        <div>Expert App</div>
         <Footer />
       </div>
-    </>
+    </div>
   );
 };
 
