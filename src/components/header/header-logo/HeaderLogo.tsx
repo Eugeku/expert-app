@@ -3,16 +3,12 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import styles from './HeaderLogo.module.scss';
 
-interface HeaderLogoProps {
-  route: string;
-}
-
-const HeaderLogo: FC<HeaderLogoProps> = (props) => {
+const HeaderLogo: FC = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
   const onHeaderLogoClick = () => {
-    navigate(props.route);
+    navigate("/");
   };
 
   return (
