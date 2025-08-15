@@ -8,7 +8,7 @@ const HeaderLogo: FC = () => {
   const navigate = useNavigate();
 
   const onHeaderLogoClick = () => {
-    navigate("/");
+    navigate('/');
   };
 
   return (

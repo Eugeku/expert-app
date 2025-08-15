@@ -2,11 +2,11 @@
   "page_title": "Vitebsk Technical Center",
   "company_name": "Vitebsk Technical Center LLC",
 
-  "naviagation_about": "About the company",
-  "naviagation_offers": "Services",
-  "naviagation_contacts": "Contacts",
-  "naviagation_info": "Useful information",
-  "naviagation_request": "Leave a request",
+  "navigation_about": "About the company",
+  "navigation_offers": "Services",
+  "navigation_contacts": "Contacts",
+  "navigation_info": "Useful information",
+  "navigation_request": "Leave a request",
 
   "welcome": "Welcome, {{name}}!",
   "logout": "Log out"

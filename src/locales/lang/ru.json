@@ -2,11 +2,11 @@
   "page_title": "Витебский технический центр",
   "company_name": "ООО «Витебский технический центр»",
 
-  "naviagation_about": "О компании",
-  "naviagation_offers": "Услуги",
-  "naviagation_contacts": "Контакты",
-  "naviagation_info": "Полезная информация",
-  "naviagation_request": "Оставить заявку",
+  "navigation_about": "О компании",
+  "navigation_offers": "Услуги",
+  "navigation_contacts": "Контакты",
+  "navigation_info": "Полезная информация",
+  "navigation_request": "Оставить заявку",
 
   "welcome": "Привет, {{name}}!",
   "logout": "Выйти"

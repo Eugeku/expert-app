@@ -8,11 +8,11 @@ const Navigation: FC = () => {
 
   return (
     <ul className={styles.navigation}>
-      <NavigationItem route="/" itemName={t('naviagation_about')} />
-      <NavigationItem route="/offers" itemName={t('naviagation_offers')} />
-      <NavigationItem route="/contacts" itemName={t('naviagation_contacts')} />
-      <NavigationItem route="/info" itemName={t('naviagation_info')} />
-      <NavigationItem route="/request" itemName={t('naviagation_request')} />
+      <NavigationItem route="/" itemName={t('navigation_about')} />
+      <NavigationItem route="/offers" itemName={t('navigation_offers')} />
+      <NavigationItem route="/contacts" itemName={t('navigation_contacts')} />
+      <NavigationItem route="/info" itemName={t('navigation_info')} />
+      <NavigationItem route="/request" itemName={t('navigation_request')} />
     </ul>
   );
 };
