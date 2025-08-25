@@ -1,18 +1,21 @@
-import Footer from '@components/footer/Footer';
-import Header from '@components/header/Header';
+import Home from '@pages/home/Home';
 import { useDocumentTitle } from '@utils/hooks/useDocumentTitle';
 import { type FC } from 'react';
-import './App.scss';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import styles from './App.module.scss';
 
 const App: FC = () => {
   useDocumentTitle('page_title');
 
   return (
-    <div className="app-wrapper">
-      <div className="app">
-        <Header />
-        <Footer />
-      </div>
+    <div className={styles.app}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/about" element={<About />} /> */}
+          {/* <Route path="*" element={<NotFound />} /> */}
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };

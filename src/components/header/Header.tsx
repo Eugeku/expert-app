@@ -10,10 +10,12 @@ const Header: FC = () => {
 
   return (
     <header className={styles.header}>
-      <HeaderLogo />
-      <Navigation />
+      <div className={styles.header__content}>
+        <HeaderLogo />
+        <Navigation />
 
-      {/* <LanguageSwitcher /> */}
+        {/* <LanguageSwitcher /> */}
+      </div>
     </header>
   );
 };
