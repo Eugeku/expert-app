@@ -1,16 +1,44 @@
-.footer__contact {
+.footer_contact {
   display: flex;
+  align-items: center;
+  padding: 1rem;
 
   &__img {
-    width: 40px;
-    height: 40px;
-    margin-right: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+    transition: var(--short-animation);
+  }
+
+  &:hover {
+    .footer_contact__img {
+      transform: scale(1.4);
+    }
   }
 
   &__text {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-start;
+    justify-content: space-around;
+
+    &__link_interactive {
+      padding: 0.2rem;
+      color: var(--color-primary);
+      text-decoration: none;
+      transition: var(--short-animation);
+
+      &:hover {
+        color: var(--color-accent);
+        text-decoration: underline;
+      }
+    }
+
+    &__link_no_interactive {
+      padding: 0.2rem;
+      font-size: var(--small-text-size);
+      color: var(--color-secondary);
+      text-decoration: none;
+    }
   }
 }

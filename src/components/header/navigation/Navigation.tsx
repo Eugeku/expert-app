@@ -8,7 +8,7 @@ const Navigation: FC = () => {
 
   return (
     <ul className={styles.navigation}>
-      <NavigationItem route="/" itemName={t('navigation_about')} />
+      <NavigationItem route="/about" itemName={t('navigation_about')} />
       <NavigationItem route="/offers" itemName={t('navigation_offers')} />
       <NavigationItem route="/contacts" itemName={t('navigation_contacts')} />
       <NavigationItem route="/info" itemName={t('navigation_info')} />

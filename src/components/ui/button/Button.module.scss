@@ -13,6 +13,7 @@
   transition: var(--short-animation);
 
   &:hover {
+    transform: scale(1.3);
     color: var(--color-bg);
     background-color: var(--color-primary);
   }

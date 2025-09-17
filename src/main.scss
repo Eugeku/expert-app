@@ -3,8 +3,8 @@
 @import 'https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Noto+Serif+JP:wght@200..900&display=swap';
 
 :root {
-  --color-primary: #3a7bd5;
-  --color-secondary: #00d2ff;
+  --color-primary: rgb(58 123 213);
+  --color-secondary: rgb(39 39 39);
   --color-accent: #ff9f43;
   --color-success: #28c76f;
   --color-warning: #ffb400;
@@ -18,8 +18,11 @@
   --color-shadow: rgb(0 0 0 / 8%);
   --short-animation: 0.3s ease-in-out;
   --long-animation: 0.5s ease-in-out;
+  --small-text-size: 0.875rem;
   --regular-text-size: 1rem;
+  --accent-text-size: 1.25rem;
   --large-text-size: 1.5rem;
+  --extra-large-text-size: 2rem;
   --h1-text-size: 2rem;
   --h2-text-size: 1.5rem;
   --h3-text-size: 1.25rem;

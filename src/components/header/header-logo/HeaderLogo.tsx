@@ -14,7 +14,7 @@ const HeaderLogo: FC = () => {
   return (
     <div className={styles.logo} onClick={() => onHeaderLogoClick()}>
       <div className={styles.logo__img}></div>
-      <div className={styles.logo__text}>{t('company_name')}</div>
+      <h1 className={styles.logo__text}>{t('company_name')}</h1>
     </div>
   );
 };

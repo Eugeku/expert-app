@@ -1,8 +1,11 @@
-import Home from '@pages/home/Home';
 import { useDocumentTitle } from '@utils/hooks/useDocumentTitle';
 import { type FC } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import styles from './App.module.scss';
+import AboutCompany from '@/components/about/About';
+import AboutMain from '@/components/about-main/AboutMain';
+import Footer from '@/components/footer/Footer';
+import Header from '@/components/header/Header';
 
 const App: FC = () => {
   useDocumentTitle('page_title');
@@ -10,11 +13,19 @@ const App: FC = () => {
   return (
     <div className={styles.app}>
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          {/* <Route path="/about" element={<About />} /> */}
-          {/* <Route path="*" element={<NotFound />} /> */}
-        </Routes>
+        <Header />
+        <main className={styles.app__main}>
+          <Routes>
+            <Route path="/" element={<AboutMain />} />
+            <Route path="/about" element={<AboutCompany />} />
+            <Route path="/offers" element={<div>Offers</div>} />
+            <Route path="/contacts" element={<div>Contacts</div>} />
+            <Route path="/info" element={<div>Info</div>} />
+            <Route path="/request" element={<div>Request</div>} />
+            {/* <Route path="*" element={<NotFound />} /> */}
+          </Routes>
+        </main>
+        <Footer />
       </BrowserRouter>
     </div>
   );

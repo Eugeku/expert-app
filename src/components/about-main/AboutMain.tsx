@@ -1,15 +1,17 @@
 import type { FC } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './AboutMain.module.scss';
 import Button from '@/components/ui/button/Button';
 
 const AboutMain: FC = () => {
+  const navigate = useNavigate();
   return (
     <section className={styles.about_main}>
       <div className={styles.about_main__content}>
         <div className={styles.about_main__content__img_wrapper}>
           <img
             className={styles.about_main__content__img_wrapper__img}
-            src="./src/assets/images/people.jpg"
+            src="./src/assets/images/people.png"
             alt="logo"
           />
         </div>
@@ -34,7 +36,7 @@ const AboutMain: FC = () => {
               ответа с государственной экспертизы Минтруда Республики Беларусь
             </li>
           </ul>
-          <Button text="Подробнее" />
+          <Button text="Подробнее" onClick={() => navigate('/about')} />
         </div>
       </div>
     </section>

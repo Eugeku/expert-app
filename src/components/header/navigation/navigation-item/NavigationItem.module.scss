@@ -15,11 +15,16 @@
 
     padding: 0.5rem;
 
+    font-size: var(--accent-text-size);
     color: var(--color-primary);
     text-decoration: none;
     text-wrap: nowrap;
 
     transition: var(--short-animation);
+
+    @media screen and (width <= 1280px) {
+      font-size: var(--regular-text-size);
+    }
   }
 
   &:hover {

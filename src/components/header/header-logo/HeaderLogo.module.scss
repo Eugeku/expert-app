@@ -5,23 +5,34 @@
   align-items: center;
 
   &__img {
-    width: 40px;
-    height: 40px;
+    width: 4rem;
+    height: 4rem;
 
-    background-image: url('/src/assets/company-logo.svg');
+    background-image: url('/src/assets/company-logo.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+
+    transition: var(--short-animation);
   }
 
   &__text {
-    color: var(--color-text);
+    font-size: var(--h3-text-size);
+    color: var(--color-secondary);
     transition: var(--short-animation);
+
+    @media screen and (width <= 1280px) {
+      font-size: var(--h4-text-size);
+    }
   }
 
   &:hover {
     .logo__text {
       color: var(--color-accent);
+    }
+
+    .logo__img {
+      transform: scale(1.4);
     }
   }
 }
