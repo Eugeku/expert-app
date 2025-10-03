@@ -6,6 +6,7 @@ import AboutCompany from '@/components/about/About';
 import AboutMain from '@/components/about-main/AboutMain';
 import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
+import Info from '@/components/info/Info';
 
 const App: FC = () => {
   useDocumentTitle('page_title');
@@ -20,7 +21,7 @@ const App: FC = () => {
             <Route path="/about" element={<AboutCompany />} />
             <Route path="/offers" element={<div>Offers</div>} />
             <Route path="/contacts" element={<div>Contacts</div>} />
-            <Route path="/info" element={<div>Info</div>} />
+            <Route path="/info" element={<Info />} />
             <Route path="/request" element={<div>Request</div>} />
             {/* <Route path="*" element={<NotFound />} /> */}
           </Routes>
