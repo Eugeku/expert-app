@@ -4,12 +4,14 @@
 
 :root {
   --color-primary: rgb(58 123 213);
+  --color-primary-alt: rgb(30 159 242);
   --color-secondary: rgb(39 39 39);
-  --color-accent: #ff9f43;
+  --color-accent: rgb(255 159 67);
+  --color-accent-alt: rgb(141 130 29);
   --color-success: #28c76f;
   --color-warning: #ffb400;
   --color-error: #ea5455;
-  --color-info: #1e9ff2;
+  --color-info: rgb(30 159 242);
   --color-bg: #f5f7fa;
   --color-bg-alt: #fff;
   --color-text: #2e2e2e;
@@ -41,6 +43,8 @@
   font-size: var(--regular-text-size);
   font-optical-sizing: auto;
   font-style: normal;
+  line-height: 1.2rem;
+  color: var(--color-text);
 
   background-color: var(--color-bg);
 }

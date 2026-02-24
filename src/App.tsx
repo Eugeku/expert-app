@@ -18,10 +18,13 @@ const App: FC = () => {
         <main className={styles.app__main}>
           <Routes>
             <Route path="/" element={<AboutMain />} />
-            <Route path="/about" element={<AboutCompany />} />
+            <Route
+              path="/about"
+              element={<AboutCompany content_id={'about'} />}
+            />
             <Route path="/offers" element={<div>Offers</div>} />
             <Route path="/contacts" element={<div>Contacts</div>} />
-            <Route path="/info" element={<Info />} />
+            <Route path="/info" element={<Info content_id={'info'} />} />
             <Route path="/request" element={<div>Request</div>} />
             {/* <Route path="*" element={<NotFound />} /> */}
           </Routes>

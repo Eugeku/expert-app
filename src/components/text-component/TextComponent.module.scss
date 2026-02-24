@@ -1,0 +1,96 @@
+.text_component {
+  border-radius: 2rem;
+  background: linear-gradient(
+    to right,
+    rgb(146 146 146 / 30%),
+    rgb(255 255 255 / 30%)
+  );
+
+  &__title {
+    padding: 1rem;
+    font-size: var(--h2-text-size);
+    color: var(--color-primary);
+    text-align: center;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+      display: flex;
+
+      padding: 1rem;
+
+      font-size: var(--h3-text-size);
+      color: var(--color-accent);
+      text-align: center;
+      text-shadow: 1px -1px 1px black;
+    }
+
+    &__section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+
+      width: 100%;
+      padding: 1rem;
+
+      &__title {
+        font-size: var(--h3-text-size);
+        color: var(--color-accent-alt);
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      &__paragraph {
+        width: 100%;
+        padding: 0.5rem;
+
+        &__title {
+          display: flex;
+          padding: 0.5rem;
+        }
+
+        &__text {
+          display: flex;
+          padding: 0.5rem;
+        }
+
+        &__list {
+          list-style: circle;
+
+          &__item {
+            padding: 0.5rem;
+
+            &__title {
+              display: flex;
+            }
+
+            &__text {
+              display: flex;
+            }
+          }
+        }
+
+        &__img {
+          display: flex;
+          flex-direction: column;
+
+          &__label {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding: 0.5rem;
+          }
+
+          &__image {
+            border-radius: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

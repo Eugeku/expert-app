@@ -1,11 +1,32 @@
-import type { FC } from 'react';
+import { useEffect, useState, type FC } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Info.module.scss';
 import ImageOverlay from '@/components/img-overlay/ImageOverlay';
+import TextComponent from '@/components/text-component/TextComponent';
 import Button from '@/components/ui/button/Button';
+import { getPageById } from '@/data/api/pages';
+import type { Page } from '@/data/models/page';
 
-const Info: FC = () => {
+interface ContentIdProps {
+  content_id: string;
+}
+
+const Info: FC<ContentIdProps> = ({ content_id }) => {
   const navigate = useNavigate();
+  const [pageContent, setPage] = useState<Page | null>(null);
+
+  useEffect(() => {
+    getPageById(content_id).then((data) => {
+      if (data) {
+        setPage(data);
+      }
+    });
+  }, [content_id]);
+
+  if (!pageContent) {
+    return null; // или loader
+  }
+
   return (
     <section className={styles.info}>
       <div className={styles.info__content}>
@@ -13,17 +34,7 @@ const Info: FC = () => {
           <ImageOverlay src="./src/assets/images/cert.png" alt="cert" />
         </div>
         <div className={styles.info__content__text_wrapper}>
-          <div className={styles.info__content__text_wrapper__text}>
-            <h2>Аттестация рабочих мест</h2>
-            <h3>Аттестация рабочих мест по условиям труда – что это?</h3>
-            <p className={styles.info__content__text_wrapper__text__paragraph}>
-              Аттестация рабочих мест в Беларуси — это комплекс мер, который
-              включает в себя выявление рабочих мест с вредными условиями труда,
-              их оценку, а также разработку мероприятий по улучшению условий
-              труда.
-            </p>
-          </div>
-
+          <TextComponent pageContent={pageContent} />
           <Button text="Наши услуги" onClick={() => navigate('/offers')} />
         </div>
       </div>
