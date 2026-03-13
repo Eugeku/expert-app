@@ -3,10 +3,12 @@
 
   display: flex;
 
-  border: 1px transparent solid;
-  border-radius: 0.75rem;
+  border: 2px transparent solid;
+  border-radius: 2rem;
 
   list-style-type: none;
+
+  background-color: rgb(58 123 213 / 80%);
 
   transition: var(--short-animation);
 
@@ -16,11 +18,15 @@
     padding: 0.5rem;
 
     font-size: var(--accent-text-size);
-    color: var(--color-primary);
+    color: var(--color-bg);
     text-decoration: none;
     text-wrap: nowrap;
 
     transition: var(--short-animation);
+
+    &_active {
+      color: var(--color-accent);
+    }
 
     @media screen and (width <= 1280px) {
       font-size: var(--regular-text-size);
@@ -28,7 +34,8 @@
   }
 
   &:hover {
-    border: 1px solid var(--color-primary);
+    // border: 1px solid var(--color-primary);
+    border: 2px var(--color-accent) solid;
 
     .item__link {
       color: var(--color-accent);

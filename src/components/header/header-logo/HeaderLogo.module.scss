@@ -1,12 +1,15 @@
 .logo {
   cursor: pointer;
+
   display: flex;
   flex-direction: column;
   align-items: center;
 
+  transition: var(--short-animation);
+
   &__img {
-    width: 4rem;
-    height: 4rem;
+    width: 15rem;
+    height: 10rem;
 
     background-image: url('/src/assets/company-logo.png');
     background-repeat: no-repeat;
@@ -18,7 +21,7 @@
 
   &__text {
     font-size: var(--h3-text-size);
-    color: var(--color-secondary);
+    color: var(--color-primary);
     transition: var(--short-animation);
 
     @media screen and (width <= 1280px) {
@@ -32,7 +35,7 @@
     }
 
     .logo__img {
-      transform: scale(1.4);
+      transform: scale(1.2);
     }
   }
 }

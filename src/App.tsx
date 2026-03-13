@@ -17,7 +17,7 @@ const App: FC = () => {
         <Header />
         <main className={styles.app__main}>
           <Routes>
-            <Route path="/" element={<AboutMain />} />
+            <Route path="/" element={<AboutMain content_id={'about_main'} />} />
             <Route
               path="/about"
               element={<AboutCompany content_id={'about'} />}

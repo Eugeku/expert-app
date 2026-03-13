@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './NavigationItem.module.scss';
 
 interface NavigationItemProps {
@@ -10,9 +10,17 @@ interface NavigationItemProps {
 const NavigationItem: FC<NavigationItemProps> = (props) => {
   return (
     <li className={styles.item}>
-      <Link to={props.route} className={styles.item__link}>
+      <NavLink
+        to={props.route}
+        end={props.route === '/'}
+        className={({ isActive }) =>
+          isActive
+            ? `${styles.item__link} ${styles.item__link_active}`
+            : styles.item__link
+        }
+      >
         {props.itemName}
-      </Link>
+      </NavLink>
     </li>
   );
 };

@@ -1,10 +1,32 @@
-import type { FC } from 'react';
+import { useEffect, useState, type FC } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './AboutMain.module.scss';
+import TextComponent from '@/components/text-component/TextComponent';
 import Button from '@/components/ui/button/Button';
+import { getPageById } from '@/data/api/pages';
+import type { Page } from '@/data/models/page';
 
-const AboutMain: FC = () => {
+interface ContentIdProps {
+  content_id: string;
+}
+
+const AboutMain: FC<ContentIdProps> = ({ content_id }) => {
   const navigate = useNavigate();
+
+  const [pageContent, setPage] = useState<Page | null>(null);
+
+  useEffect(() => {
+    getPageById(content_id).then((data) => {
+      if (data) {
+        setPage(data);
+      }
+    });
+  }, [content_id]);
+
+  if (!pageContent) {
+    return null; // или loader
+  }
+
   return (
     <section className={styles.about_main}>
       <div className={styles.about_main__content}>
@@ -16,26 +38,7 @@ const AboutMain: FC = () => {
           />
         </div>
         <div className={styles.about_main__content__text}>
-          <h2 className={styles.about_main__content__text__title}>
-            Аттестация рабочих мест с нами — вы уверены в завтрашнем дне!
-          </h2>
-          <ul>
-            <li>
-              Выезд специалиста на инструментальные замеры факторов
-              производственной среды
-            </li>
-            <li>
-              Оперативная и качественная подготовка документов по аттестации
-              рабочих мест
-            </li>
-            <li>
-              Полное сопровождение и консультация на всех этапах аттестации
-            </li>
-            <li>
-              Мониторинг документов по аттестации рабочих мест да положительного
-              ответа с государственной экспертизы Минтруда Республики Беларусь
-            </li>
-          </ul>
+          <TextComponent pageContent={pageContent} />
           <Button text="Подробнее" onClick={() => navigate('/about')} />
         </div>
       </div>
