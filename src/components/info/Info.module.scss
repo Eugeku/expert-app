@@ -43,22 +43,22 @@
 
       width: 100%;
 
-      &__text {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
+      [class*='block__title'] {
+        width: 100%;
+        max-width: 20rem;
+        margin: 1rem 0;
+        border: 1px dotted var(--color-text-muted);
+        border-radius: 1rem;
 
-        border-radius: 2rem;
+        color: var(--color-bg);
 
-        background: linear-gradient(
-          to right,
-          rgb(146 146 146 / 30%),
-          rgb(255 255 255 / 30%)
-        );
+        background: #7b7b7b73;
 
-        &__paragraph {
-          padding: 1rem;
+        transition: var(--short-animation);
+
+        &:hover {
+          cursor: pointer;
+          color: var(--color-accent);
         }
       }
     }

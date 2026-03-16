@@ -5,6 +5,7 @@ import styles from './App.module.scss';
 import AboutCompany from '@/components/about/About';
 import AboutMain from '@/components/about-main/AboutMain';
 import Footer from '@/components/footer/Footer';
+import ScrollToTop from '@/components/functional/ScrollToTop';
 import Header from '@/components/header/Header';
 import Info from '@/components/info/Info';
 
@@ -16,6 +17,7 @@ const App: FC = () => {
       <BrowserRouter>
         <Header />
         <main className={styles.app__main}>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<AboutMain content_id={'about_main'} />} />
             <Route

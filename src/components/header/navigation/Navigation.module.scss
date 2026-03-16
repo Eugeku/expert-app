@@ -1,4 +1,8 @@
 .navigation {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
   &__burger {
     cursor: pointer;
 
@@ -79,7 +83,7 @@
       transform: scale(0.9);
     }
 
-    @media (width <=768px) {
+    @media screen and (width <=768px) {
       z-index: 999999;
       display: flex;
     }
@@ -92,7 +96,11 @@
     align-items: center;
     justify-content: space-between;
 
-    @media (width <=768px) {
+    @media screen and (width <=1024px) {
+      gap: 0.7rem;
+    }
+
+    @media screen and (width <=768px) {
       pointer-events: none;
 
       position: absolute;
@@ -110,9 +118,12 @@
 
       &_open {
         pointer-events: auto;
+
         position: relative;
         transform: translateY(0);
+
         display: flex;
+        gap: 2rem;
       }
 
       &_overlay {
@@ -131,9 +142,9 @@
         }
       }
     }
+  }
 
-    @media screen and (width <=1024px) {
-      gap: 0.7rem;
-    }
+  @media screen and (width <=768px) {
+    justify-content: flex-end;
   }
 }

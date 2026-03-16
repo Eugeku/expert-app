@@ -15,10 +15,12 @@
   &__link {
     display: block;
 
+    width: 100%;
     padding: 0.5rem;
 
     font-size: var(--accent-text-size);
     color: var(--color-bg);
+    text-align: center;
     text-decoration: none;
     text-wrap: nowrap;
 
@@ -34,11 +36,16 @@
   }
 
   &:hover {
-    // border: 1px solid var(--color-primary);
     border: 2px var(--color-accent) solid;
 
     .item__link {
       color: var(--color-accent);
     }
+  }
+
+  @media screen and (width <= 768px) {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
 }

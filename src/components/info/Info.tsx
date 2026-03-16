@@ -13,6 +13,10 @@ interface ContentIdProps {
 const Info: FC<ContentIdProps> = ({ content_id }) => {
   const navigate = useNavigate();
   const [pageContent, setPage] = useState<Page | null>(null);
+  const [activeBlockId, setActiveBlockId] = useState<string | null>(null);
+  const handleBlockToggle = (id: string) => {
+    setActiveBlockId((prev) => (prev === id ? null : id));
+  };
 
   useEffect(() => {
     getPageById(content_id).then((data) => {
@@ -30,7 +34,11 @@ const Info: FC<ContentIdProps> = ({ content_id }) => {
     <section className={styles.info}>
       <div className={styles.info__content}>
         <div className={styles.info__content__text_wrapper}>
-          <TextComponent pageContent={pageContent} />
+          <TextComponent
+            pageContent={pageContent}
+            activeBlockId={activeBlockId}
+            onBlockToggle={handleBlockToggle}
+          />
           <Button text="Наши услуги" onClick={() => navigate('/offers')} />
         </div>
       </div>
