@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import styles from './App.module.scss';
 import AboutCompany from '@/components/about/About';
 import AboutMain from '@/components/about-main/AboutMain';
+import Contacts from '@/components/contacts/Contacts';
 import Footer from '@/components/footer/Footer';
 import ScrollToTop from '@/components/functional/ScrollToTop';
 import Header from '@/components/header/Header';
@@ -25,7 +26,10 @@ const App: FC = () => {
               element={<AboutCompany content_id={'about'} />}
             />
             <Route path="/offers" element={<div>Offers</div>} />
-            <Route path="/contacts" element={<div>Contacts</div>} />
+            <Route
+              path="/contacts"
+              element={<Contacts content_id={'contacts'} />}
+            />
             <Route path="/info" element={<Info content_id={'info'} />} />
             <Route path="/request" element={<div>Request</div>} />
             {/* <Route path="*" element={<NotFound />} /> */}

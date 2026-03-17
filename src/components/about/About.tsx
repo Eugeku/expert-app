@@ -32,7 +32,7 @@ const About: FC<ContentIdProps> = ({ content_id }) => {
     <section className={styles.about}>
       <div className={styles.about__content}>
         <div className={styles.about__content__img_wrapper}>
-          <ImageOverlay src="./src/assets/images/cert.png" alt="cert" />
+          <ImageOverlay src="./assets/images/cert.png" alt="cert" />
         </div>
 
         <div className={styles.about__content__text_wrapper}>

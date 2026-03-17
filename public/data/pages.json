@@ -470,7 +470,7 @@
                 "paragraph_list": null,
                 "paragraph_img": {
                   "img_label": "Периодичность проведения контроля факторов производственной среды",
-                  "img_src": "./src/assets/images/control-table.png",
+                  "img_src": "./assets/images/control-table.png",
                   "img_alt": "controll-table"
                 }
               }

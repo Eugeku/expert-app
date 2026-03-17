@@ -10,6 +10,7 @@
   "scripts": {
     "start": "npm run format && vite",
     "build": "npm run format && vite build",
+    "preview": "vite preview",
     "format": "npm run pret && npm run check && npm run lint && npm run stylelint:fix && npm run stylelint",
     "lint": "eslint .",
     "pret": "prettier --write .",

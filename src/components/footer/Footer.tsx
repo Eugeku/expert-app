@@ -12,7 +12,7 @@ const Footer: FC = () => {
         <div>УНП 391365905</div>
         <div className={styles.footer__content__contacts}>
           <FooterContact
-            img="./src/assets/icons/icon-phone.svg"
+            img="./assets/icons/icon-phone.svg"
             img_alt="phone"
             text_lines={[
               { value: 'Рабочий тел./факс:', isInteractive: false },
@@ -25,13 +25,13 @@ const Footer: FC = () => {
             link_type={LinkType.phone}
           />
           <FooterContact
-            img="./src/assets/icons/icon-email.svg"
+            img="./assets/icons/icon-email.svg"
             img_alt="email"
             text_lines={[{ value: 'vitteh@tut.by', isInteractive: true }]}
             link_type={LinkType.email}
           />
           <FooterContact
-            img="./src/assets/icons/icon-marker.svg"
+            img="./assets/icons/icon-marker.svg"
             img_alt="map"
             text_lines={[
               { value: '210029, Республика Беларусь', isInteractive: true },

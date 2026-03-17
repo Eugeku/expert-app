@@ -1,6 +1,6 @@
 import { useEffect, useState, type FC } from 'react';
 import { useNavigate } from 'react-router-dom';
-import styles from './AboutMain.module.scss';
+import styles from './Contacts.module.scss';
 import TextComponent from '@/components/text-component/TextComponent';
 import Button from '@/components/ui/button/Button';
 import { getPageById } from '@/data/api/pages';
@@ -10,7 +10,7 @@ interface ContentIdProps {
   content_id: string;
 }
 
-const AboutMain: FC<ContentIdProps> = ({ content_id }) => {
+const Contacts: FC<ContentIdProps> = ({ content_id }) => {
   const navigate = useNavigate();
 
   const [pageContent, setPage] = useState<Page | null>(null);
@@ -24,11 +24,11 @@ const AboutMain: FC<ContentIdProps> = ({ content_id }) => {
   }, [content_id]);
 
   if (!pageContent) {
-    return null; // или loader
+    return null;
   }
 
   return (
-    <section className={styles.about_main}>
+    <section className={styles.contacts}>
       <div className={styles.about_main__content}>
         <div className={styles.about_main__content__img_wrapper}>
           <img
@@ -46,4 +46,4 @@ const AboutMain: FC<ContentIdProps> = ({ content_id }) => {
   );
 };
 
-export default AboutMain;
+export default Contacts;

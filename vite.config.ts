@@ -5,9 +5,11 @@ import { configDefaults } from 'vitest/config';
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: './',
   plugins: [react(), tsconfigPaths()],
 
   build: {
+    emptyOutDir: true,
     minify: true,
     sourcemap: false,
   },
