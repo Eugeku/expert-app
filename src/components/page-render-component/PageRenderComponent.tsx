@@ -1,15 +1,15 @@
 import { type FC } from 'react';
-import styles from './TextComponent.module.scss';
+import styles from './PageRenderComponent.module.scss';
 import ImageOverlay from '@/components/img-overlay/ImageOverlay';
 import type { Page } from '@/data/models/page';
 
-interface TextProps {
+interface PageRenderProps {
   pageContent: Page;
   activeBlockId?: string | null;
   onBlockToggle?: (id: string) => void;
 }
 
-const TextComponent: FC<TextProps> = ({
+const PageRenderComponent: FC<PageRenderProps> = ({
   pageContent,
   activeBlockId,
   onBlockToggle,
@@ -137,4 +137,4 @@ const TextComponent: FC<TextProps> = ({
   );
 };
 
-export default TextComponent;
+export default PageRenderComponent;

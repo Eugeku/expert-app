@@ -662,5 +662,64 @@
         ]
       }
     ]
+  },
+  {
+    "page_id": "contacts",
+    "page_title": "Контакты",
+    "page_blocks": [
+      {
+        "block_id": "contacts_block",
+        "block_title": null,
+        "block_sections": [
+          {
+            "section_id": "common_info_section",
+            "section_title": null,
+            "section_paragraphs": [
+              {
+                "paragraph_id": "schedule",
+                "paragraph_title": "Режим работы:",
+                "paragraph_text": "Понедельник-Пятница с 9:00 - 17:00",
+                "paragraph_list": null,
+                "paragraph_img": null
+              },
+              {
+                "paragraph_id": "email",
+                "paragraph_title": null,
+                "paragraph_text": "vittech@tut.by",
+                "paragraph_list": null,
+                "paragraph_img": "../img/contacts.png"
+              },
+              {
+                "paragraph_id": "phone",
+                "paragraph_title": "Рабочий тел./факс:",
+                "paragraph_text": "8-0212-24-90-93",
+                "paragraph_list": null,
+                "paragraph_img": "../img/contacts.png"
+              },
+              {
+                "paragraph_id": "address",
+                "paragraph_title": null,
+                "paragraph_text": "210029, Республика Беларусь, г. Витебск, ул. Правды, 25, 3 этаж, офис 39(вход со двора, пристройка слева от входа в магазин «Грошик»)",
+                "paragraph_list": null,
+                "paragraph_img": "../img/contacts.png"
+              }
+            ]
+          },
+          {
+            "section_id": "map_section",
+            "section_title": null,
+            "section_paragraphs": [
+              {
+                "paragraph_id": "map",
+                "paragraph_title": null,
+                "paragraph_text": "Карта проезда",
+                "paragraph_list": null,
+                "paragraph_img": "../img/contacts.png"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]

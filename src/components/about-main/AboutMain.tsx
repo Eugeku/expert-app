@@ -1,7 +1,7 @@
 import { useEffect, useState, type FC } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './AboutMain.module.scss';
-import TextComponent from '@/components/text-component/TextComponent';
+import PageRenderComponent from '@/components/page-render-component/PageRenderComponent';
 import Button from '@/components/ui/button/Button';
 import { getPageById } from '@/data/api/pages';
 import type { Page } from '@/data/models/page';
@@ -37,8 +37,8 @@ const AboutMain: FC<ContentIdProps> = ({ content_id }) => {
             alt="logo"
           />
         </div>
-        <div className={styles.about_main__content__text}>
-          <TextComponent pageContent={pageContent} />
+        <div className={styles.about_main__content__text_wrapper}>
+          <PageRenderComponent pageContent={pageContent} />
           <Button text="Подробнее" onClick={() => navigate('/about')} />
         </div>
       </div>

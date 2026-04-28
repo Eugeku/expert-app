@@ -1,7 +1,7 @@
 import { useEffect, useState, type FC } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Info.module.scss';
-import TextComponent from '@/components/text-component/TextComponent';
+import PageRenderComponent from '@/components/page-render-component/PageRenderComponent';
 import Button from '@/components/ui/button/Button';
 import { getPageById } from '@/data/api/pages';
 import type { Page } from '@/data/models/page';
@@ -34,7 +34,7 @@ const Info: FC<ContentIdProps> = ({ content_id }) => {
     <section className={styles.info}>
       <div className={styles.info__content}>
         <div className={styles.info__content__text_wrapper}>
-          <TextComponent
+          <PageRenderComponent
             pageContent={pageContent}
             activeBlockId={activeBlockId}
             onBlockToggle={handleBlockToggle}

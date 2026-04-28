@@ -1,9 +1,9 @@
 import type { FC } from 'react';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import TextComponent from '../text-component/TextComponent';
 import styles from './About.module.scss';
 import ImageOverlay from '@/components/img-overlay/ImageOverlay';
+import PageRenderComponent from '@/components/page-render-component/PageRenderComponent';
 import Button from '@/components/ui/button/Button';
 import { getPageById } from '@/data/api/pages';
 import type { Page } from '@/data/models/page';
@@ -36,7 +36,7 @@ const About: FC<ContentIdProps> = ({ content_id }) => {
         </div>
 
         <div className={styles.about__content__text_wrapper}>
-          <TextComponent pageContent={pageContent} />
+          <PageRenderComponent pageContent={pageContent} />
           <Button text="Наши услуги" onClick={() => navigate('/offers')} />
         </div>
       </div>

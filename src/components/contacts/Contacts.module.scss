@@ -1,3 +1,39 @@
 .contacts {
-  display: flex;
+  &__content {
+    display: flex;
+    flex: 1;
+    gap: 1rem;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 1440px;
+    padding: 1rem;
+
+    &__text_wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+      justify-content: space-between;
+
+      width: 100%;
+
+      &__text {
+        width: 100%;
+        border-radius: 2rem;
+        background: linear-gradient(
+          to right,
+          rgb(146 146 146 / 30%),
+          rgb(255 255 255 / 30%)
+        );
+
+        &__title {
+          padding: 1rem;
+          font-size: var(--h2-text-size);
+          color: var(--color-primary);
+          text-align: center;
+        }
+      }
+    }
+  }
 }
